@@ -1,0 +1,46 @@
+$main-fz: 16px;
+$main-fw: 400;
+$main-lh: 1.3;
+$main-ff: 'Nunito', Arial, Helvetica, sans-serif;
+$secondary-ff: 'Roboto', Arial, Helvetica, sans-serif;
+
+$main-color: #4A4949;
+$secondary-color: #323232;
+$primary-color: #646464;
+$black-color: #000;
+$white-color: #fff;
+$grey: #606060;
+$chinese-silver: #CACACA;
+$platinum: #E5E5E5;
+
+$trs: all .3s;
+
+$mobile-low: 479px;
+$mobile-width: 767px;
+$tablet-width: 1024px;
+$desktop-width: 1366px;
+
+@mixin b($breakpoints) {
+  @if ($breakpoints == desktop) {
+    @media (max-width: #{$desktop-width}) {
+      @content
+      }
+    }
+  @if ($breakpoints == tablet) {
+    @media (max-width: #{$tablet-width}) {
+      @content
+    }
+  } @else if ($breakpoints == mobile) {
+    @media (max-width: #{$mobile-width}) {
+      @content
+    }
+  } @else if ($breakpoints == mobile-sm) {
+    @media (max-width: #{$mobile-low}) {
+      @content
+    }
+  } @else {
+    @media (max-width: $breakpoints + px) {
+      @content
+      }
+    }
+}
