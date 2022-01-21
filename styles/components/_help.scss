@@ -1,0 +1,76 @@
+@import '../common/vars';
+
+.help {
+    padding: 50px 0;
+    
+    &__wrap {
+        padding: 127px 164px 100px;
+        background-color: $blanched-almond;
+        @include b(tablet) {
+            padding: 127px 100px 100px;
+        }
+        @include b(mobile) {
+            padding: 127px 50px 100px;
+        }
+    }
+
+    &__caption {
+        color: $secondary-color;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: $primary-color;
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+
+    &__submit {
+        width: 100%;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 22px;
+        left: 22px;
+        height: 30px;
+        width: 40px;
+        display: flex;
+
+        &-red {
+            width: 14px;
+            background-color: #F23A3A;
+        }
+
+        &-white {
+            width: 12px;
+            background-color: #fff;
+        }
+
+        &-blue {
+            width: 14px;
+            background-color: #1613D5;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 6px;
+        right: 12px;
+        @include b(mobile) {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &__input {
+        margin-bottom: 30px;
+        height: 78px;
+        background-color: $white-color;
+        border: 1px solid $white-color;
+        color: $black-color;
+        font-size: 29px;
+        padding-left: 74px;
+    }
+}

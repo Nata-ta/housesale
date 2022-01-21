@@ -1,0 +1,23 @@
+@import './vars';
+
+input {
+    width: 100%;
+    font-family: $main-ff;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid $blanched-almond;
+    background-color: $blanched-almond;
+    color: $black-color;
+    height: 65px;
+    padding: 0 13px;
+    transition: $trs;
+
+    &::placeholder {
+        color: $black-color;
+        font-size: 29px;
+    }
+
+    &:focus {
+        border-color: $primary-color;
+    }
+}

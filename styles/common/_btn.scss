@@ -1,0 +1,15 @@
+@import '../common/vars';
+
+.btn {
+    border: 1px solid $yellow-color;
+    background-color: $yellow-color;
+    padding: 20px 80px;
+    color: $black-color;
+    font-size: 23px;
+    line-height: 1.1;
+    height: 65px;
+
+    &:hover {
+        border-color: $primary-color;
+    }
+}
