@@ -52,7 +52,7 @@
     }
 
     &__text {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     &__image {
@@ -60,7 +60,7 @@
         padding-bottom: 105%;
 
         @include b(mobile) {
-            padding-bottom: 110%;
+            padding-bottom: 125%;
         }
     }
 

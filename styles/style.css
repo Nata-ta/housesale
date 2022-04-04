@@ -442,7 +442,7 @@ input:focus {
   margin-bottom: 20px;
 }
 .answers__text {
-  font-size: 21px;
+  font-size: 20px;
 }
 .answers__image {
   position: relative;
@@ -450,7 +450,7 @@ input:focus {
 }
 @media (max-width: 767px) {
   .answers__image {
-    padding-bottom: 110%;
+    padding-bottom: 125%;
   }
 }
 .answers__img {
