@@ -1,11 +1,12 @@
 @import '../common/vars';
 
 .answers {
-    padding: 50px 0 100px;
+    padding: 50px 0;
 
     &__wrap {
         display: flex;
         margin: 0 -15px;
+
         @include b(tablet) {
             display: block;
         }
@@ -14,6 +15,7 @@
     &__col {
         width: 50%;
         padding: 0 15px;
+
         @include b(tablet) {
             width: 100%;
         }
@@ -29,8 +31,17 @@
         align-items: center;
         margin-bottom: 50px;
 
+        @include b(mobile) {
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
         &-img-box {
-            margin-right: 29px;
+            margin: 0 29px 0 0;
+
+            @include b(mobile) {
+                margin: 0 0 20px 0;
+            }
         }
     }
 
@@ -46,9 +57,10 @@
 
     &__image {
         position: relative;
-        padding-bottom: 130%;
-        @include b(tablet) {
-            padding-bottom: 100%;
+        padding-bottom: 105%;
+
+        @include b(mobile) {
+            padding-bottom: 110%;
         }
     }
 
@@ -58,12 +70,17 @@
         top: 0;
         left: 74px;
         z-index: 1;
+
+        @include b(mobile) {
+            left: 0;
+            width: 100%;
+        }
     }
 
     &__images-box {
         position: relative;
     }
-     
+
     &__img-ract {
         background-color: $yellow-color;
         position: absolute;
@@ -72,10 +89,11 @@
         width: 400px;
         height: 354px;
         z-index: -1;
+
         @include b(tablet) {
             display: none;
         }
     }
 
-    
+
 }
