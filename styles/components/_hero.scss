@@ -5,13 +5,11 @@
     background-image: url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
-        min-height: 100vh;
         top: 0;
         left: 0;
         right: 0;
@@ -21,6 +19,7 @@
 
     &__header {
         position: relative;
+        margin-bottom: 50px;
 
         &-wrap {
             display: flex;
@@ -41,6 +40,8 @@
             }
 
             &--open {
+                position: fixed;
+                right: 15px;
 
                 .hero__header-btn-line:nth-child(1) {
                     transform: rotate(45deg);
@@ -93,11 +94,11 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background-color: $white-color;
-            width: 320px;
+            background-color: rgba($white-color, .9);
+            width: 50%;
             z-index: 2;
-            padding: 120px 0;
-            transform: translateX(320px);
+            padding: 110px 0;
+            transform: translateX(100%);
             flex-direction: column;
             justify-content: center;
             text-align: center;
@@ -135,25 +136,22 @@
                 left: 0;
                 background-color: currentColor;
                 transition: $trs;
-
-                @include b(tablet) {
-                    top: 30px;
-                }
             }
 
             &:hover:before {
                 width: 100%;
+
+                @include b(tablet) {
+                    top: 30px;
+                }
             }
         }
     }
 
     &__body {
         position: relative;
-        padding: 170px 0;
 
-        @include b(mobile) {
-            padding: 85px 30px 0;
-        }
+        @include b(mobile) {}
     }
 
     &__caption {
@@ -171,7 +169,7 @@
     &__text {
         font-size: 29px;
         color: $white-color;
-        margin-bottom: 81px;
+        margin-bottom: 50px;
         max-width: 785px;
 
         @include b(mobile) {
